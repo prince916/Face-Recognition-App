@@ -1,10 +1,19 @@
 import './App.css';
-import Login from './componenets/login/Login';
+import Logo from './componenets/Logo/Logo';
+import Navigation from './componenets/Navigation/Navigation';
+import ImageLinkForm from './componenets/ImageLinkForm/ImageLinkForm';
+import Rank from './componenets/Rank/Rank';
+
 
 function App() {
   return (
-    <div>
-      <Login />
+    <div className='App'>
+      <Navigation />
+      <Logo />
+      <Rank />
+      <ImageLinkForm />
+      {/*
+      <FaceRecognition /> */}
     </div>
   );
 }
