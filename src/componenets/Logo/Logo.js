@@ -1,14 +1,14 @@
 import React from "react";
 import { Tilt } from "react-tilt";
-import  brain from "./brain.jpg"
+import  Face from "./Face.png"
 import './Logo.css';
 
 const Logo = () => {
   return (
-    <div className="ma4 mt0">
-      <Tilt className='Tilt br2 shadow-2' options={{ max : 55}} style={{ height: 150, width: 150 }}>
-        <div className="tilt-inner pa4">
-          <img alt="logo" src={brain} />
+    <div className="ma2">
+      <Tilt className='Tilt' options={{ max : 55}} style={{ height: 250, width: 250 }}>
+        <div className="poster">
+          <img alt="logo" src={Face} />
         </div>
       </Tilt>
     </div>
