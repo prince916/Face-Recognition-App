@@ -1,6 +1,5 @@
 import "./App.css";
 import ParticlesBg from "particles-bg";
-import Clarifai from "clarifai";
 import Logo from "./componenets/Logo/Logo";
 import Navigation from "./componenets/Navigation/Navigation";
 import ImageLinkForm from "./componenets/ImageLinkForm/ImageLinkForm";
@@ -21,7 +20,7 @@ class App extends Component {
       input: "",
       imageUrl: "",
       route: "signin",
-      isSignedIn: false
+      isSignedIn: false,
     };
   }
 
@@ -31,52 +30,54 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    App.models
-      .predict(
-        Clarifai.COLOR_MODEL,
-        "https://dqt8gd4elnkw6.cloudfront.net/image/Face-makeup-tips-for-flawless-looking-skin%20%281%29.png"
-      )
-      .then(
-        function (response) {
-          console.log(response);
-        },
-        function (err) {
-          //text
-        }
-      );
+    // App.models
+    //   .predict(
+    //     Clarifai.FACE_DETECT_MODEL,
+    //     this.state.input
+    //   )
+    //   .then(
+    //     function (response) {
+    //       console.log(response);
+    //     },
+    //     function (err) {
+    //       console.log(err);
+    //     }
+    //   );
   };
 
   onRouteChange = (route) => {
-    if (route === 'signout') {
-      this.setState({isSignedIn: false})
-    } else if (route === 'home') {
-      this.setState({isSignedIn: true})
+    if (route === "signout") {
+      this.setState({ isSignedIn: false });
+    } else if (route === "home") {
+      this.setState({ isSignedIn: true });
     }
-    this.setState({route: route});
-  }
+    this.setState({ route: route });
+  };
 
   render() {
-    const { imageUrl, route } = this.state;
+    const { isSignedIn, imageUrl, route } = this.state;
     return (
       <div className="App">
-        <ParticlesBg type="fountain" bg={true} />
-        <Navigation isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange} />
-        { route === 'home'
-          ? <div>
-              <Logo />
-              <Rank />
-              <ImageLinkForm
-                onInputChange={this.onInputChange}
-                onButtonSubmit={this.onButtonSubmit}
-              />
-              <FaceRecognition imageUrl={imageUrl} />
-            </div>
-          : (
-             this.state.route === 'signin'
-             ? <Signin onRouteChange={this.onRouteChange}/>
-             : <Register onRouteChange={this.onRouteChange}/>
-            )
-        }
+        <ParticlesBg type="shower" bg={true} />
+        <Navigation
+          isSignedIn={isSignedIn}
+          onRouteChange={this.onRouteChange}
+        />
+        {route === "home" ? (
+          <div>
+            <Logo />
+            <Rank />
+            <ImageLinkForm
+              onInputChange={this.onInputChange}
+              onButtonSubmit={this.onButtonSubmit}
+            />
+            <FaceRecognition imageUrl={imageUrl} />
+          </div>
+        ) : this.state.route === "signin" ? (
+          <Signin onRouteChange={this.onRouteChange} />
+        ) : (
+          <Register onRouteChange={this.onRouteChange} />
+        )}
       </div>
     );
   }

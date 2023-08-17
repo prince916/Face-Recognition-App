@@ -5,8 +5,8 @@ import './Logo.css';
 
 const Logo = () => {
   return (
-    <div className="ma2">
-      <Tilt className='Tilt' options={{ max : 75}} style={{ height: 250, width: 250 }}>
+    <div className="">
+      <Tilt className='Tilt' options={{ max : 75}} style={{ height: 150, width: 200 }}>
         <div className="poster">
           <img alt="logo" src={Face} />
         </div>
