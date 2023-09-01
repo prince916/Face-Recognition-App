@@ -4,7 +4,7 @@ const Rank = () => {
   return (
     <div className='center'>
         <div className='black f1 m0'>
-            {'Prince, your rank is here ....'}
+            {'Prince, your rank is here ...'}
         </div>
         <div className='dark-red f1 pl3 pr6'>
             {'#5'}

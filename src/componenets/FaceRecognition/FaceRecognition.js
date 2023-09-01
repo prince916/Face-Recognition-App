@@ -1,9 +1,10 @@
 import React from 'react'
+import girlface from "../../images/girlface.jpeg";
 
-const FaceRecognition = ({imageUrl}) => {
+const FaceRecognition = () => {
   return (
     <div className='center'>
-      <img src={imageUrl} alt='tops' />
+      <img src={girlface} alt='tops' />
     </div>
   )
 }
