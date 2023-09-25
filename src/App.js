@@ -9,6 +9,7 @@ import FaceRecognition from "./componenets/FaceRecognition/FaceRecognition";
 import Signin from "./componenets/signin/Signin";
 import Register from "./componenets/register/Register";
 
+// API ---just for comment
 // const app = new Clarifai.App({
 //   apiKey: "ec5020228af342e58bc23eef1da62b21",
 // });
