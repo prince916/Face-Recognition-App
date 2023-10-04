@@ -1,4 +1,4 @@
-# Here this new project
+# This is an AI,ML and Pattern Recognition based project
 
 # Getting Started with Create React App
 
