@@ -1,4 +1,4 @@
-# This is an AI,ML and Pattern Recognition based project
+# This is an AI,ML and Pattern Recognition based projects
 
 # Getting Started with Create React App
 
