@@ -1,4 +1,6 @@
-# Here this new project
+# This is an AI,ML and Pattern Recognition based projects
+
+# I prepared this project using React.js for Frontend part..
 
 # Getting Started with Create React App
 
